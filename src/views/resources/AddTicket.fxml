@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TicketController">
    <children>
@@ -27,8 +28,14 @@
                   <RowConstraints maxHeight="20.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Cancel" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Confirmar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Cancel" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Confirmar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                   <Separator prefWidth="200.0" />
                   <Separator prefWidth="200.0" GridPane.columnIndex="2" />
                   <Separator prefWidth="200.0" GridPane.columnIndex="1" />
@@ -51,11 +58,23 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Cliente" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                  <Label text="Patente" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                  <Label text="Peso" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label text="Cliente" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Patente" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Peso" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
                   <ChoiceBox prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
-                  <Label text="Producto" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label text="Producto" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
                   <ChoiceBox prefHeight="25.0" prefWidth="125.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
                   <ChoiceBox prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                   <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
@@ -75,8 +94,14 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Nro ticket: E-12345" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Label text="20/8/2020 - 13:30" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label text="Nro ticket: E-12345" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="20/8/2020 - 13:30" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <Separator prefWidth="200.0" GridPane.rowIndex="2" />
                   <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
