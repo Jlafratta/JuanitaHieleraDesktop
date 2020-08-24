@@ -4,12 +4,14 @@ public class Client {
     private String Id;
     private String Name;
     private String dni;
+    private int state;
 
 
-    public Client(String id, String name, String dni) {
+    public Client(String id, String name, String dni, int state) {
         Id = id;
         Name = name;
         this.dni = dni;
+        this.state = state;
     }
 
     public String getId() {

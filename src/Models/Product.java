@@ -4,12 +4,13 @@ public class Product {
     private int Id;
     private String name;
     private float price_x_Kg;
+private float totalPrice;
 
-
-    public Product(int id, String name, float price_x_Kg) {
+    public Product(int id, String name, float price_x_Kg, float totalPrice) {
         Id = id;
         this.name = name;
         this.price_x_Kg = price_x_Kg;
+        this.totalPrice = totalPrice;
     }
 
     public int getId() {
