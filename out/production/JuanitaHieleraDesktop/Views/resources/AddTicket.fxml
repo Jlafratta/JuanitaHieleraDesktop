@@ -53,7 +53,7 @@
             <GridPane hgap="10.0" prefHeight="166.0" prefWidth="569.0" vgap="10.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="120.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="133.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="119.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="133.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="59.0" />
@@ -77,7 +77,7 @@
                      <font>
                         <Font size="16.0" />
                      </font></Label>
-                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="119.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></ChoiceBox>
@@ -89,11 +89,11 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></ChoiceBox>
-                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="119.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></ChoiceBox>
-                  <TextField id="btn-primary" prefHeight="25.0" prefWidth="157.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <TextField id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </center>
