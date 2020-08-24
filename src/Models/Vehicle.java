@@ -9,6 +9,7 @@ public class Vehicle {
             private Client cliente;
 
 
+
     public Vehicle(int id, String patente, String nombre, String modelo, String marca, Client cliente) {
         Id = id;
         this.patente = patente;

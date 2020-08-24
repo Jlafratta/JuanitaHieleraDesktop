@@ -7,14 +7,16 @@ public class Ticket {
     private Float TotalPrice;
     private Client client;
     private Product product;
+    private Vehicle vehicle;
 
-    public Ticket(String date, String time, float neto, Float totalPrice, Client client, Product product) {
+    public Ticket(String date, String time, float neto, Float totalPrice, Client client, Product product, Vehicle vehicle) {
         this.date = date;
         this.time = time;
         this.neto = neto;
         TotalPrice = totalPrice;
         this.client = client;
         this.product = product;
+        this.vehicle = vehicle;
     }
 
     public String getDate() {
