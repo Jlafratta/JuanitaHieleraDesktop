@@ -15,7 +15,6 @@ public class ProductController {
 
        Product producto = new Product(id,name,price_x_Kg,totalPrice);
 
-
         return producto ; ///ProducDao.AddProduct
 
     }

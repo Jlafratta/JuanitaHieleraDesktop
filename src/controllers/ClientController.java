@@ -1,20 +1,26 @@
 package controllers;
 
-import Models.Product;
+
+import Models.Client;
 
 public class ClientController {
 
          //service o dao
 
 
-    public Product createVehicle (int id, String name, float price_x_Kg, float totalPrice){
+    public Client createClient (String id, String name, String dni, int state){
 
-        Product producto = new Product(id,name,price_x_Kg,totalPrice);
+        Client client = new Client(id,name,dni,state);
 
 
-        return producto ; ///ProducDao.AddProduct
+        return client ; ///ClientDao.AddClient
+
 
     }
+
+
+
+
 
 
 }

@@ -37,4 +37,5 @@ public class Client {
     public void setDni(String dni) {
         this.dni = dni;
     }
+
 }
