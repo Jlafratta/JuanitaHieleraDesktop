@@ -1,5 +1,0 @@
-#btn-primary {
--fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
--fx-background-radius: 5,4,3,5;
--fx-background-insets: 0,1,2,0;
-}
