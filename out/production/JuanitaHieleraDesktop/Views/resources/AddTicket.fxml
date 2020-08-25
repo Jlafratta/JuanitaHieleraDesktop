@@ -29,14 +29,14 @@
                   <RowConstraints maxHeight="20.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button id="btn-primary" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" stylesheets="@stylesheets/style.css" text="Cancelar" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Button id="btn-primary" fx:id="btnCancelar" mnemonicParsing="false" onMouseClicked="#btnCancelarEvent" prefHeight="45.0" prefWidth="100.0" stylesheets="@stylesheets/style.css" text="Cancelar" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="16.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button id="btn-primary" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" stylesheets="@stylesheets/style.css" text="Confirmar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Button id="btn-primary" fx:id="btnConfirmar" mnemonicParsing="false" onMouseClicked="#btnConfirmarEvent" prefHeight="45.0" prefWidth="100.0" stylesheets="@stylesheets/style.css" text="Confirmar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -77,7 +77,7 @@
                      <font>
                         <Font size="16.0" />
                      </font></Label>
-                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                  <ChoiceBox id="btn-primary" fx:id="choiseCliente" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></ChoiceBox>
@@ -85,15 +85,15 @@
                      <font>
                         <Font size="16.0" />
                      </font></Label>
-                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                  <ChoiceBox id="btn-primary" fx:id="choiseProducto" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></ChoiceBox>
-                  <ChoiceBox id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                  <ChoiceBox id="btn-primary" fx:id="choisePatente" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></ChoiceBox>
-                  <TextField id="btn-primary" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <TextField id="btn-primary" fx:id="txtPeso" prefHeight="25.0" prefWidth="131.0" stylesheets="@stylesheets/style.css" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </center>
@@ -110,11 +110,11 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Nro ticket: E-12345" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="labNroTicket" text="Nro ticket: E-12345" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <Label text="20/8/2020 - 13:30" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="labFechaHora" text="20/8/2020 - 13:30" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font></Label>

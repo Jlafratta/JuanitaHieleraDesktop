@@ -40,6 +40,17 @@ public class Menu extends Application {
         stage.show();
     }
 
+    public void listTicketsView() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("resources/ListTickets.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Listado de tickets");
+        stage.setResizable(false);
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     /* Metodo que se ejecuta al cerrar la app */
     @Override

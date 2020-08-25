@@ -9,7 +9,17 @@ public class MenuController {
 
     Menu menu = new Menu();
 
-    public void addTicketEvent(MouseEvent mouseEvent) throws IOException {
+    public void btnNuevoIngresoEvent(MouseEvent mouseEvent) throws IOException {
         menu.addTicketView();
+    }
+
+    public void btnTicketsEvent(MouseEvent mouseEvent) throws IOException {
+        menu.listTicketsView();
+    }
+
+    public void btnClientesEvent(MouseEvent mouseEvent) {
+    }
+
+    public void btnVehiculosEvent(MouseEvent mouseEvent) {
     }
 }

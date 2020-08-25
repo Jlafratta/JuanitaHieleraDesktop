@@ -38,7 +38,7 @@
                <padding>
                   <Insets left="35.0" />
                </padding></Label>
-            <Button id="btn-primary" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addTicketEvent" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Nuevo ingreso" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button id="btn-primary" fx:id="btnNuevoIngreso" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#btnNuevoIngresoEvent" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Nuevo ingreso" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -49,21 +49,21 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button id="btn-primary" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Tickets" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+            <Button id="btn-primary" fx:id="btnTickets" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#btnTicketsEvent" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Tickets" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button id="btn-primary" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Clientes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+            <Button id="btn-primary" fx:id="btnClientes" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#btnClientesEvent" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Clientes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button id="btn-primary" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Vehiculos" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+            <Button id="btn-primary" fx:id="btnVehiculos" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#btnVehiculosEvent" prefHeight="45.0" prefWidth="115.0" stylesheets="@stylesheets/style.css" text="Vehiculos" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
