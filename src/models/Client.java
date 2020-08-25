@@ -1,33 +1,33 @@
 package models;
 
 public class Client {
-    private String Id;
-    private String Name;
+    private String id;
+    private String name;
     private String dni;
     private int state;
 
 
     public Client(String id, String name, String dni, int state) {
-        Id = id;
-        Name = name;
+        this.id = id;
+        this.name = name;
         this.dni = dni;
         this.state = state;
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDni() {
@@ -38,4 +38,13 @@ public class Client {
         this.dni = dni;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", dni='" + dni + '\'' +
+                ", state=" + state +
+                '}';
+    }
 }
