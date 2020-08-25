@@ -1,7 +1,7 @@
 package controllers;
 
-import views.Menu;
 import javafx.scene.input.MouseEvent;
+import views.Menu;
 
 import java.io.IOException;
 
