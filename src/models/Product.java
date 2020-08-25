@@ -1,24 +1,22 @@
 package models;
 
 public class Product {
-    private int Id;
+    private int id;
     private String name;
-    private float price_x_Kg;
-private float totalPrice;
+    private float price;
 
-    public Product(int id, String name, float price_x_Kg, float totalPrice) {
-        Id = id;
+    public Product(int id, String name, float price) {
+        this.id = id;
         this.name = name;
-        this.price_x_Kg = price_x_Kg;
-        this.totalPrice = totalPrice;
+        this.price = price;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -29,12 +27,20 @@ private float totalPrice;
         this.name = name;
     }
 
-    public float getPrice_x_Kg() {
-        return price_x_Kg;
+    public float getPrice() {
+        return price;
     }
 
-    public void setPrice_x_Kg(float price_x_Kg) {
-        this.price_x_Kg = price_x_Kg;
+    public void setPrice(float price) {
+        this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
