@@ -4,16 +4,16 @@ public class Ticket {
     private String date;
     private String time;
     private float neto;
-    private Float TotalPrice;
+    private float TotalPrice;
     private Client client;
     private Product product;
     private Vehicle vehicle;
 
-    public Ticket(String date, String time, float neto, Float totalPrice, Client client, Product product, Vehicle vehicle) {
+    public Ticket(String date, String time, float neto, float totalPrice, Client client, Product product, Vehicle vehicle) {
         this.date = date;
         this.time = time;
         this.neto = neto;
-        TotalPrice = totalPrice;
+        this.TotalPrice = totalPrice;
         this.client = client;
         this.product = product;
         this.vehicle = vehicle;
@@ -65,5 +65,18 @@ public class Ticket {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", neto=" + neto +
+                ", TotalPrice=" + TotalPrice +
+                ", client=" + client +
+                ", product=" + product +
+                ", vehicle=" + vehicle +
+                '}';
     }
 }
