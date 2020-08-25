@@ -1,8 +1,8 @@
 package controllers;
 
 
-import Dao.ProductDao;
-import Models.Product;
+import dao.ProductDao;
+import models.Product;
 
 
 public class ProductController {

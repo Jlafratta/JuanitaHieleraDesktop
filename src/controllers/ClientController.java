@@ -1,7 +1,7 @@
 package controllers;
 
 
-import Models.Client;
+import models.Client;
 
 public class ClientController {
 

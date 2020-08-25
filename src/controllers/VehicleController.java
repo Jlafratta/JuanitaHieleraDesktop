@@ -1,9 +1,9 @@
 package controllers;
 
 
-import Dao.VehicleDao;
-import Models.Client;
-import Models.Vehicle;
+import dao.VehicleDao;
+import models.Client;
+import models.Vehicle;
 
 public class VehicleController {
 
