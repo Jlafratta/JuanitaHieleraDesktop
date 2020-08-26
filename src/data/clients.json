@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "name": "Julian",
+    "dni": "41307551",
+    "state": 1
+  },
+  {
+    "id": 2,
+    "name": "Pedro",
+    "dni": "123",
+    "state": 1,
+    "vehicles": [
+      {
+        "id": 1,
+        "patent": "AA222BB",
+        "model": "Prisma",
+        "brand": "Chevrolet"
+      },
+      {
+        "id": 2,
+        "patent": "AA222BB",
+        "model": "Vectra",
+        "brand": "Chevrolet"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Juan",
+    "dni": "234",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 4,
+    "name": "Pipo",
+    "dni": "345",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  },
+  {
+    "id": 5,
+    "name": "Lionel Andres",
+    "dni": "123123123",
+    "state": 1,
+    "vehicles": []
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "idCompound": "E-1",
+    "date": "26/8/2020",
+    "time": "1:10:25",
+    "neto": 1500.0,
+    "totalPrice": 15000.0,
+    "client": {
+      "id": 5,
+      "name": "Lionel Andres",
+      "dni": "123123123",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "PRODUCTO 1",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 1,
+      "patent": "FOV212",
+      "model": "Gol Power",
+      "brand": "Volkswagen"
+    }
+  },
+  {
+    "id": 2,
+    "idCompound": "E-2",
+    "date": "26/8/2020",
+    "time": "1:10:25",
+    "neto": 1500.0,
+    "totalPrice": 15000.0,
+    "client": {
+      "id": 5,
+      "name": "Lionel Andres",
+      "dni": "123123123",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "PRODUCTO 1",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 1,
+      "patent": "FOV212",
+      "model": "Gol Power",
+      "brand": "Volkswagen"
+    }
+  }
+]

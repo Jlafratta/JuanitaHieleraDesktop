@@ -6,23 +6,12 @@ public class Vehicle {
     private String patent;
     private String model;
     private String brand;
-    private Client client;
 
-
-    public Vehicle(int id, String patent, String model, String brand, Client client) {
+    public Vehicle(int id, String patent, String model, String brand) {
         this.id = id;
         this.patent = patent;
         this.model = model;
         this.brand = brand;
-        this.client = client;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 
     public int getId() {
@@ -64,7 +53,6 @@ public class Vehicle {
                 ", patent='" + patent + '\'' +
                 ", model='" + model + '\'' +
                 ", brand='" + brand + '\'' +
-                ", client=" + client +
-                '}';
+                "}\n";
     }
 }

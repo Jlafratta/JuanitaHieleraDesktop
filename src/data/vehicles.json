@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "patent": "FOV212",
+    "model": "Gol Power",
+    "brand": "Volkswagen"
+  },
+  {
+    "id": 2,
+    "patent": "AA123BB",
+    "model": "Ranger",
+    "brand": "Ford"
+  },
+  {
+    "id": 3,
+    "patent": "CC321GG",
+    "model": "Suran",
+    "brand": "Volkswagen"
+  }
+]

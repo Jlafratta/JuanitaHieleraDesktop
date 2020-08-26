@@ -8,9 +8,9 @@ public class ClientController {
          //service o dao
 
 
-    public Client createClient (String id, String name, String dni, int state){
+    public Client createClient (int id, String name, String dni, int state){
 
-        Client client = new Client(id,name,dni,state);
+        Client client = new Client(id, name,dni,state);
 
 
         return client ; ///ClientDao.AddClient
