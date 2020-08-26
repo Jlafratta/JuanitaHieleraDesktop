@@ -18,7 +18,7 @@ public class VehicleController {
 
     public Vehicle createVehicle (int id, String patente, String nombre, String modelo, String marca, Client cliente){
 
-        Vehicle vehicle= new Vehicle(id,patente,nombre,modelo,marca,cliente);
+        Vehicle vehicle= new Vehicle(id,patente,modelo,marca);
 
 
         return vehicle ; ///VehicleDao.AddVehicle
