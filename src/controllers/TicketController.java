@@ -70,7 +70,7 @@ public class TicketController implements Initializable, Utils {
         initFields();
     }
 
-    /** Events **/
+    /** AddTicket Events **/
 
     // Seleccionar cliente
     public void selectClientEvent(ActionEvent actionEvent) {
