@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import utils.NumberField?>
 
-<AnchorPane prefHeight="440.0" prefWidth="600.0" style="-fx-background-color: f5f5f5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TicketController">
+<AnchorPane prefHeight="440.0" prefWidth="600.0" style="-fx-background-color: f5f5f5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddTicketController">
    <children>
       <BorderPane layoutX="15.0" prefHeight="440.0" prefWidth="570.0">
          <bottom>

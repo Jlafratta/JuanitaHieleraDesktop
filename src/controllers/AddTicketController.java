@@ -6,7 +6,6 @@ import dao.ProductDao;
 import dao.TicketDao;
 import dao.VehicleDao;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,7 +28,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class TicketController implements Initializable, Utils {
+public class AddTicketController implements Initializable, Utils {
 
     private ClientDao clientDao;
     private ProductDao productDao;
@@ -57,7 +56,7 @@ public class TicketController implements Initializable, Utils {
     @FXML
     private Label labFechaHora;
 
-    public TicketController(){
+    public AddTicketController(){
         this.clientDao = new ClientDao();
         this.productDao = new ProductDao();
         this.ticketDao = new TicketDao();
@@ -140,12 +139,17 @@ public class TicketController implements Initializable, Utils {
         List<Client> clientList = clientDao.getAll();
         List<Product> productList = productDao.getAll();
 
-        for (Client c : clientList) {
-            this.comboCliente.getItems().add(c.getName());
+        if (!clientList.isEmpty()){
+            for (Client c : clientList) {
+                this.comboCliente.getItems().add(c.getName());
+            }
         }
-        for (Product p : productList) {
-            this.choiseProducto.getItems().add(p.getName());
+        if(!productList.isEmpty()){
+            for (Product p : productList) {
+                this.choiseProducto.getItems().add(p.getName());
+            }
         }
+
         this.choiseProducto.setValue(productList.get(0).getName()); //Valor por defecto
 
         this.labNroTicket.setText("Nro ticket: E-"+(ticketDao.getLastId()+1));
