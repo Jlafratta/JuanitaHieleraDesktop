@@ -4,14 +4,16 @@ public class Vehicle {
 
     private int id;
     private String patent;
-    private String model;
-    private String brand;
+    private String description;
+    private float tara;
+    private String client;  // id - nombre
 
-    public Vehicle(int id, String patent, String model, String brand) {
+    public Vehicle(int id, String patent, String description, float tara, String client) {
         this.id = id;
         this.patent = patent;
-        this.model = model;
-        this.brand = brand;
+        this.description = description;
+        this.tara = tara;
+        this.client = client;
     }
 
     public int getId() {
@@ -31,19 +33,35 @@ public class Vehicle {
     }
 
     public String getModel() {
-        return model;
+        return description;
     }
 
     public void setModel(String model) {
-        this.model = model;
+        this.description = model;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getDescription() {
+        return description;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public float getTara() {
+        return tara;
+    }
+
+    public void setTara(float tara) {
+        this.tara = tara;
+    }
+
+    public String getClient() {
+        return client;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
     }
 
     @Override
@@ -51,8 +69,9 @@ public class Vehicle {
         return "Vehicle{" +
                 "id=" + id +
                 ", patent='" + patent + '\'' +
-                ", model='" + model + '\'' +
-                ", brand='" + brand + '\'' +
-                "}\n";
+                ", description='" + description + '\'' +
+                ", tara=" + tara +
+                ", client='" + client + '\'' +
+                '}';
     }
 }

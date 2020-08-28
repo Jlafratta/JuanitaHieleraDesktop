@@ -2,53 +2,323 @@
   {
     "id": 1,
     "idCompound": "E-1",
-    "date": "26/8/2020",
-    "time": "1:10:25",
+    "date": "27/08/2020 - 23:47:10",
+    "bruto": 3500.0,
+    "tara": 2000.0,
     "neto": 1500.0,
     "totalPrice": 15000.0,
     "client": {
-      "id": 5,
-      "name": "Lionel Andres",
-      "dni": "123123123",
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
       "state": 1,
-      "vehicles": []
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "AA222BB",
+          "tara": 0.0
+        },
+        {
+          "id": 2,
+          "patent": "FOV212",
+          "tara": 0.0
+        }
+      ]
     },
     "product": {
       "id": 1,
-      "name": "PRODUCTO 1",
+      "name": "HIELO",
       "price": 10.0
-    },
-    "vehicle": {
-      "id": 1,
-      "patent": "FOV212",
-      "model": "Gol Power",
-      "brand": "Volkswagen"
     }
   },
   {
     "id": 2,
     "idCompound": "E-2",
-    "date": "26/8/2020",
-    "time": "1:10:25",
-    "neto": 1500.0,
-    "totalPrice": 15000.0,
+    "date": "28/08/2020 - 00:13:00",
+    "bruto": 0.0,
+    "tara": 0.0,
+    "neto": 0.0,
+    "totalPrice": 0.0,
     "client": {
-      "id": 5,
-      "name": "Lionel Andres",
-      "dni": "123123123",
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
       "state": 1,
-      "vehicles": []
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "AA222BB",
+          "tara": 0.0
+        },
+        {
+          "id": 2,
+          "patent": "FOV212",
+          "tara": 0.0
+        }
+      ]
     },
     "product": {
       "id": 1,
-      "name": "PRODUCTO 1",
+      "name": "HIELO",
+      "price": 10.0
+    }
+  },
+  {
+    "id": 3,
+    "idCompound": "E-3",
+    "date": "28/08/2020 - 00:20:29",
+    "bruto": 3500.0,
+    "tara": 2000.0,
+    "neto": 1500.0,
+    "totalPrice": 15000.0,
+    "client": {
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
+      "state": 1,
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "FOV212",
+          "description": "Gol Power",
+          "tara": 1500.0,
+          "client": "2 - Pedro"
+        },
+        {
+          "id": 2,
+          "patent": "AA222BB",
+          "description": "Ranger",
+          "tara": 2000.0,
+          "client": "2 - Pedro"
+        }
+      ]
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 2,
+      "patent": "AA222BB",
+      "description": "Ranger",
+      "tara": 2000.0,
+      "client": "2 - Pedro"
+    }
+  },
+  {
+    "id": 4,
+    "idCompound": "E-4",
+    "date": "28/08/2020 - 00:22:14",
+    "bruto": 3000.0,
+    "tara": 1500.0,
+    "neto": 1500.0,
+    "totalPrice": 15000.0,
+    "client": {
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
+      "state": 1,
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "FOV212",
+          "description": "Gol Power",
+          "tara": 1500.0,
+          "client": "2 - Pedro"
+        },
+        {
+          "id": 2,
+          "patent": "AA222BB",
+          "description": "Ranger",
+          "tara": 2000.0,
+          "client": "2 - Pedro"
+        }
+      ]
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
       "price": 10.0
     },
     "vehicle": {
       "id": 1,
       "patent": "FOV212",
-      "model": "Gol Power",
-      "brand": "Volkswagen"
+      "description": "Gol Power",
+      "tara": 1500.0,
+      "client": "2 - Pedro"
+    }
+  },
+  {
+    "id": 5,
+    "idCompound": "E-5",
+    "date": "28/08/2020 - 00:22:26",
+    "bruto": 0.0,
+    "tara": 1500.0,
+    "neto": -1500.0,
+    "totalPrice": -15000.0,
+    "client": {
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
+      "state": 1,
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "FOV212",
+          "description": "Gol Power",
+          "tara": 1500.0,
+          "client": "2 - Pedro"
+        },
+        {
+          "id": 2,
+          "patent": "AA222BB",
+          "description": "Ranger",
+          "tara": 2000.0,
+          "client": "2 - Pedro"
+        }
+      ]
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 1,
+      "patent": "FOV212",
+      "description": "Gol Power",
+      "tara": 1500.0,
+      "client": "2 - Pedro"
+    }
+  },
+  {
+    "id": 6,
+    "idCompound": "E-6",
+    "date": "28/08/2020 - 00:25:36",
+    "bruto": 3000.0,
+    "tara": 1500.0,
+    "neto": 1500.0,
+    "totalPrice": 15000.0,
+    "client": {
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
+      "state": 1,
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "FOV212",
+          "description": "Gol Power",
+          "tara": 1500.0,
+          "client": "2 - Pedro"
+        },
+        {
+          "id": 2,
+          "patent": "AA222BB",
+          "description": "Ranger",
+          "tara": 2000.0,
+          "client": "2 - Pedro"
+        }
+      ]
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 1,
+      "patent": "FOV212",
+      "description": "Gol Power",
+      "tara": 1500.0,
+      "client": "2 - Pedro"
+    }
+  },
+  {
+    "id": 7,
+    "idCompound": "E-7",
+    "date": "28/08/2020 - 00:29:18",
+    "bruto": 3000.0,
+    "tara": 1500.0,
+    "neto": 1500.0,
+    "totalPrice": 15000.0,
+    "client": {
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
+      "state": 1,
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "FOV212",
+          "description": "Gol Power",
+          "tara": 1500.0,
+          "client": "2 - Pedro"
+        },
+        {
+          "id": 2,
+          "patent": "AA222BB",
+          "description": "Ranger",
+          "tara": 2000.0,
+          "client": "2 - Pedro"
+        }
+      ]
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 1,
+      "patent": "FOV212",
+      "description": "Gol Power",
+      "tara": 1500.0,
+      "client": "2 - Pedro"
+    }
+  },
+  {
+    "id": 8,
+    "idCompound": "E-8",
+    "date": "28/08/2020 - 01:00:09",
+    "bruto": 5000.0,
+    "tara": 1500.0,
+    "neto": 3500.0,
+    "totalPrice": 35000.0,
+    "client": {
+      "id": 2,
+      "name": "Pedro",
+      "dni": "123",
+      "state": 1,
+      "vehicles": [
+        {
+          "id": 1,
+          "patent": "FOV212",
+          "description": "Gol Power",
+          "tara": 1500.0,
+          "client": "2 - Pedro"
+        },
+        {
+          "id": 2,
+          "patent": "AA222BB",
+          "description": "Ranger",
+          "tara": 2000.0,
+          "client": "2 - Pedro"
+        }
+      ]
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    },
+    "vehicle": {
+      "id": 1,
+      "patent": "FOV212",
+      "description": "Gol Power",
+      "tara": 1500.0,
+      "client": "2 - Pedro"
     }
   }
 ]

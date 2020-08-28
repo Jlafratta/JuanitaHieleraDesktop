@@ -3,9 +3,8 @@ package dao;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import models.Client;
 import models.Product;
-import utils.Files;
+import utils.Utils;
 
 import javax.swing.*;
 import java.io.*;
@@ -13,7 +12,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDao implements Files {
+public class ProductDao implements Utils {
 
     static File file = new File(PRODUCT_FILE);
 
@@ -44,6 +43,16 @@ public class ProductDao implements Files {
             JOptionPane.showMessageDialog(null,"Error al actualizar datos de productos","Error de archivos",
                     JOptionPane.WARNING_MESSAGE);
         }
+    }
+
+    public Product getByName(String name){
+        List<Product> productList = this.getAll();
+        for ( Product p : productList ) {
+            if (p.getName().equals(name)){
+                return p;
+            }
+        }
+        return null;
     }
 
     public List<Product> getAll(){

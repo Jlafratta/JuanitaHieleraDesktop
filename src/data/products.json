@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "name": "PRODUCTO 1",
+    "name": "HIELO",
     "price": 10.0
   },
   {
-    "id": 1,
-    "name": "PRODUCTO 2",
+    "id": 2,
+    "name": "HIELIN",
     "price": 20.0
   },
   {
-    "id": 1,
-    "name": "PRODUCTO 3",
+    "id": 3,
+    "name": "HIELITO",
     "price": 30.0
   }
 ]

@@ -16,13 +16,13 @@ public class VehicleController {
     }
 
 
-    public Vehicle createVehicle (int id, String patente, String nombre, String modelo, String marca, Client cliente){
+    //public Vehicle createVehicle (int id, String patente, String nombre, String modelo, String marca, Client cliente){
 
-        Vehicle vehicle= new Vehicle(id,patente,modelo,marca);
+        //Vehicle vehicle= new Vehicle(id,patente,modelo,marca);
 
 
-        return vehicle ; ///VehicleDao.AddVehicle
-    }
+        //return vehicle ; ///VehicleDao.AddVehicle
+    //}
 
 
 

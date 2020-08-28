@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import models.Client;
-import utils.Files;
+import utils.Utils;
 
 import javax.swing.*;
 import java.io.*;
@@ -12,8 +12,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class ClientDao implements Files {
+public class ClientDao implements Utils {
 
     static File file = new File(CLIENT_FILE);
 
@@ -44,6 +43,18 @@ public class ClientDao implements Files {
             JOptionPane.showMessageDialog(null,"Error al actualizar datos de clientes","Error de archivos",
                     JOptionPane.WARNING_MESSAGE);
         }
+    }
+
+    public Client getByName(String name){
+
+        List<Client> clientList = this.getAll();
+
+        for (Client c : clientList) {
+            if (c.getName().equals(name)){
+                return c;
+            }
+        }
+        return null;
     }
 
     public List<Client> getAll(){

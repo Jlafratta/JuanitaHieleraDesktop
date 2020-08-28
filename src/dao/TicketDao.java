@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import models.Ticket;
-import utils.Files;
+import utils.Utils;
 
 import javax.swing.*;
 import java.io.*;
@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicketDao implements Files {
+public class TicketDao implements Utils {
 
     static File file = new File(TICKET_FILE);
 
@@ -38,9 +38,9 @@ public class TicketDao implements Files {
         return ticket;
     }
 
-    private int getLastId() {
+    public int getLastId() {
         List<Ticket> ticketList = this.getAll();
-        return !ticketList.isEmpty() ? ticketList.get(ticketList.size()-1).getId() : 1;
+        return !ticketList.isEmpty() ? ticketList.get(ticketList.size()-1).getId() : 0;
     }
 
     public void update(List<Ticket> ticketList){
