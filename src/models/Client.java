@@ -85,12 +85,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dni='" + dni + '\'' +
-                ", state=" + state +
-                ",\n vehicles=" + vehicles +
-                "}\n";
+        return name;
     }
 }

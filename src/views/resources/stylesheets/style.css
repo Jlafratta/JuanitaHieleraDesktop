@@ -3,3 +3,7 @@
 -fx-background-radius: 5,4,3,5;
 -fx-background-insets: 0,1,2,0;
 }
+
+#table {
+-fx-font-size: 16px;
+}

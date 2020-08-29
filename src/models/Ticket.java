@@ -38,6 +38,16 @@ public class Ticket {
         this.totalPrice = (this.product.getPrice())*(this.neto);
     }
 
+    public String getTime(){
+        String[]time = getDate().split("-");
+        return time[1];
+    }
+
+    public String getDay(){
+        String[]time = getDate().split("-");
+        return time[0];
+    }
+
     public int getId() {
         return id;
     }

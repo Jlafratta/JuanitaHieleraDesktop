@@ -30,10 +30,10 @@ import java.util.ResourceBundle;
 
 public class AddTicketController implements Initializable, Utils {
 
-    private ClientDao clientDao;
-    private ProductDao productDao;
-    private TicketDao ticketDao;
-    private VehicleDao vehicleDao;
+    private final ClientDao clientDao;
+    private final ProductDao productDao;
+    private final TicketDao ticketDao;
+    private final VehicleDao vehicleDao;
 
     @FXML
     private Button btnCancelar;

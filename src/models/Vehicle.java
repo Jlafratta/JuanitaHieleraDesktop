@@ -66,12 +66,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "id=" + id +
-                ", patent='" + patent + '\'' +
-                ", description='" + description + '\'' +
-                ", tara=" + tara +
-                ", client='" + client + '\'' +
-                '}';
+        return patent;
     }
 }
