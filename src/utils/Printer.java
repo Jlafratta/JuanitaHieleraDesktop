@@ -1,12 +1,15 @@
 package utils;
 
-import java.awt.*;
-import java.awt.print.PageFormat;
-import java.awt.print.Printable;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.printing.PDFPageable;
+
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
+import java.io.File;
+import java.io.IOException;
 
-public class Printer implements Printable {
+public class Printer  {
 
    private FactoryPDF GeneradorPdf;
 
@@ -14,16 +17,20 @@ public class Printer implements Printable {
         GeneradorPdf = generadorPdf;
     }
 
-    @Override
-    public int print (Graphics g, PageFormat f, int pageIndex)
-    {
-        if (pageIndex == 0)
+    public void ImprimirPdf(String pathFile) throws IOException, PrinterException {
+        PDDocument documento = null;
+
+        documento = PDDocument.load(new File("./documento.pdf"));
+        System.out.println(documento);
+
+
+        PrinterJob job = PrinterJob.getPrinterJob();
+        if (job.printDialog() == true)
         {
 
-            return PAGE_EXISTS;
+            job.setPageable(new PDFPageable(documento));
+            job.print();
         }
-        else
-            return NO_SUCH_PAGE;
     }
 
 
