@@ -21,7 +21,9 @@ import utils.NumberField;
 import utils.FactoryPDF;
 import utils.Utils;
 
+import java.awt.print.PrinterException;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -121,7 +123,7 @@ public class AddTicketController implements Initializable, Utils {
     }
 
     // Confirmar
-    public void btnConfirmarEvent(MouseEvent mouseEvent) throws FileNotFoundException {
+    public void btnConfirmarEvent(MouseEvent mouseEvent) throws IOException, PrinterException {
         disableFields();
         Ticket TicketToPrint = this.ticketDao.add(
                                  new Ticket(this.labFechaHora.getText(),
@@ -134,6 +136,7 @@ public class AddTicketController implements Initializable, Utils {
 
         String PathFilePdf = PrinterPDF.GenerarRutaPdf(TicketToPrint.getId());
         PrinterPDF.GenerarPdf(PathFilePdf,TicketToPrint.getId(),TicketToPrint.getProduct().getName(),TicketToPrint.getBruto(),TicketToPrint.getClient().getName(),TicketToPrint.getTara(),TicketToPrint.getVehicle().getPatent(),TicketToPrint.getNeto(),TicketToPrint.getDate());
+        PrinterPDF.ImprimirPdf(PathFilePdf);
 
         clearFields();
         enableFields();
