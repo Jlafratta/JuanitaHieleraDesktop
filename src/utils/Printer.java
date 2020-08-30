@@ -13,14 +13,15 @@ public class Printer  {
 
    private FactoryPDF GeneradorPdf;
 
-    public Printer(FactoryPDF generadorPdf) {
-        GeneradorPdf = generadorPdf;
+    public Printer() {
+        GeneradorPdf =new FactoryPDF();
     }
+
 
     public void ImprimirPdf(String pathFile) throws IOException, PrinterException {
         PDDocument documento = null;
 
-        documento = PDDocument.load(new File("./documento.pdf"));
+        documento = PDDocument.load(new File(pathFile));
         System.out.println(documento);
 
 

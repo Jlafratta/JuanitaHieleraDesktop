@@ -18,8 +18,10 @@ import models.Product;
 import models.Ticket;
 import models.Vehicle;
 import utils.NumberField;
+import utils.FactoryPDF;
 import utils.Utils;
 
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -34,6 +36,9 @@ public class AddTicketController implements Initializable, Utils {
     private final ProductDao productDao;
     private final TicketDao ticketDao;
     private final VehicleDao vehicleDao;
+
+   private FactoryPDF PrinterPDF;
+
 
     @FXML
     private Button btnCancelar;
@@ -57,10 +62,12 @@ public class AddTicketController implements Initializable, Utils {
     private Label labFechaHora;
 
     public AddTicketController(){
+
         this.clientDao = new ClientDao();
         this.productDao = new ProductDao();
         this.ticketDao = new TicketDao();
         this.vehicleDao = new VehicleDao();
+        PrinterPDF =new FactoryPDF();
     }
 
     @Override
@@ -114,17 +121,23 @@ public class AddTicketController implements Initializable, Utils {
     }
 
     // Confirmar
-    public void btnConfirmarEvent(MouseEvent mouseEvent) {
+    public void btnConfirmarEvent(MouseEvent mouseEvent) throws FileNotFoundException {
         disableFields();
-        this.ticketDao.add(
-                new Ticket(this.labFechaHora.getText(),
-                        Float.parseFloat(this.txtBruto.getText()),
-                        Float.parseFloat(this.txtTara.getText()),
-                        this.clientDao.getByName(this.comboCliente.getValue()),
-                        this.productDao.getByName(this.choiseProducto.getValue()),
-                        this.vehicleDao.getByPatent(this.comboPatente.getValue())));
+        Ticket TicketToPrint = this.ticketDao.add(
+                                 new Ticket(this.labFechaHora.getText(),
+                                      Float.parseFloat(this.txtBruto.getText()),
+                                      Float.parseFloat(this.txtTara.getText()),
+                                      this.clientDao.getByName(this.comboCliente.getValue()),
+                                      this.productDao.getByName(this.choiseProducto.getValue()),
+                                      this.vehicleDao.getByPatent(this.comboPatente.getValue())));
+
+
+        String PathFilePdf = PrinterPDF.GenerarRutaPdf(TicketToPrint.getId());
+        PrinterPDF.GenerarPdf(PathFilePdf,TicketToPrint.getId(),TicketToPrint.getProduct().getName(),TicketToPrint.getBruto(),TicketToPrint.getClient().getName(),TicketToPrint.getTara(),TicketToPrint.getVehicle().getPatent(),TicketToPrint.getNeto(),TicketToPrint.getDate());
+
         clearFields();
         enableFields();
+
     }
 
     // Cancelar

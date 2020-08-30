@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import models.Ticket;
+
 import utils.Utils;
 
 import javax.swing.*;
@@ -12,9 +13,12 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class TicketDao implements Utils {
 
     static File file = new File(TICKET_FILE);
+
 
     public TicketDao(){
         if(!file.exists()){
@@ -30,7 +34,7 @@ public class TicketDao implements Utils {
         }
     }
 
-    public Ticket add(Ticket ticket){           // Ticket sin id
+    public Ticket add(Ticket ticket){           // Ticket sin id //Ademas agregue aca el Imprimir
         List<Ticket> ticketList = this.getAll();
         ticket.setId(getLastId()+1);
         ticketList.add(ticket);
