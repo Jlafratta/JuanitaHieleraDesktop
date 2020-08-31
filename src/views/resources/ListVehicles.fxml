@@ -55,6 +55,5 @@
             </Button>
          </children>
       </HBox>
-      <ChoiceBox prefWidth="150.0" />
    </children>
 </AnchorPane>

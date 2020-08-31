@@ -1,8 +1,10 @@
 package controllers;
-/*
+
+import dao.ClientDao;
 import dao.TicketDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -31,19 +33,12 @@ public class ListClientController implements Initializable, Utils {
     @FXML
     public TableView<Client> tableClients;
     @FXML
-    public TableColumn<Client, String> colTicket;
+    public TableColumn<Client, String> colClient;
     @FXML
-    public TableColumn<Client, String> colFecha;
+    public TableColumn<Client, String> colNombre;
     @FXML
-    public TableColumn<Client, String> colHora;
-    @FXML
-    public TableColumn<Vehicle, String> colPatente;
-    @FXML
-    public TableColumn<Client, String> colCliente;
-    @FXML
-    public TableColumn<Ticket, Float> colNeto;
-    @FXML
-    public DatePicker datePicker;
+    public TableColumn<Client, String> colDni;
+
     @FXML
     public Button btnBuscar;
     @FXML
@@ -56,20 +51,18 @@ public class ListClientController implements Initializable, Utils {
     }
 
     public void configTable(){
-        colTicket.setCellValueFactory(new PropertyValueFactory<>("idCompound"));
-        colFecha.setCellValueFactory(new PropertyValueFactory<>("day"));
-        colHora.setCellValueFactory(new PropertyValueFactory<>("time"));
-        colPatente.setCellValueFactory(new PropertyValueFactory<>("vehicle"));
-        colCliente.setCellValueFactory(new PropertyValueFactory<>("client"));
-        colNeto.setCellValueFactory(new PropertyValueFactory<>("neto"));
-        tableTickets.setItems(ticketsData);
+        colClient.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colDni.setCellValueFactory(new PropertyValueFactory<>("dni"));
+
+        tableClients.setItems(ClientData);
     }
 
     public void fillData(){
-        ticketsData.clear();
-        TicketDao ticketDao = new TicketDao();
-        //ObservableList<Ticket> tickets = (ObservableList<Ticket>) ticketDao.getAll();
-        ticketsData.setAll(ticketDao.getAll());
+        ClientData.clear();
+        ClientDao clientDao = new ClientDao();
+
+        ClientData.setAll(clientDao.getAll());
     }
 
     public void searchTicketEvent(MouseEvent mouseEvent) {
@@ -80,84 +73,14 @@ public class ListClientController implements Initializable, Utils {
 
     public void contextMenuEvent(ContextMenuEvent contextMenuEvent) {
     }
-}
-package controllers;
 
-        import dao.TicketDao;
-        import javafx.collections.FXCollections;
-        import javafx.collections.ObservableList;
-        import javafx.fxml.FXML;
-        import javafx.fxml.Initializable;
-        import javafx.scene.control.Button;
-        import javafx.scene.control.DatePicker;
-        import javafx.scene.control.TableColumn;
-        import javafx.scene.control.TableView;
-        import javafx.scene.control.cell.PropertyValueFactory;
-        import javafx.scene.input.ContextMenuEvent;
-        import javafx.scene.input.MouseEvent;
-        import models.Client;
-        import models.Ticket;
-        import models.Vehicle;
-        import utils.Utils;
-
-        import java.net.URL;
-        import java.util.ResourceBundle;
-
-public class ListTicketsController implements Initializable, Utils {
-
-    public ObservableList<Ticket> ticketsData = FXCollections.observableArrayList();
-
-    @FXML
-    public TableView<Ticket> tableTickets;
-    @FXML
-    public TableColumn<Ticket, String> colTicket;
-    @FXML
-    public TableColumn<Ticket, String> colFecha;
-    @FXML
-    public TableColumn<Ticket, String> colHora;
-    @FXML
-    public TableColumn<Vehicle, String> colPatente;
-    @FXML
-    public TableColumn<Client, String> colCliente;
-    @FXML
-    public TableColumn<Ticket, Float> colNeto;
-    @FXML
-    public DatePicker datePicker;
-    @FXML
-    public Button btnBuscar;
-    @FXML
-    public Button btnRefresh;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        configTable();
-        fillData();
+    public void btnBuscar_click(ActionEvent actionEvent) {
     }
 
-    public void configTable(){
-        colTicket.setCellValueFactory(new PropertyValueFactory<>("idCompound"));
-        colFecha.setCellValueFactory(new PropertyValueFactory<>("day"));
-        colHora.setCellValueFactory(new PropertyValueFactory<>("time"));
-        colPatente.setCellValueFactory(new PropertyValueFactory<>("vehicle"));
-        colCliente.setCellValueFactory(new PropertyValueFactory<>("client"));
-        colNeto.setCellValueFactory(new PropertyValueFactory<>("neto"));
-        tableTickets.setItems(ticketsData);
+    public void searchClientEvent(MouseEvent mouseEvent) {
     }
 
-    public void fillData(){
-        ticketsData.clear();
-        TicketDao ticketDao = new TicketDao();
-        //ObservableList<Ticket> tickets = (ObservableList<Ticket>) ticketDao.getAll();
-        ticketsData.setAll(ticketDao.getAll());
-    }
-
-    public void searchTicketEvent(MouseEvent mouseEvent) {
-    }
-
-    public void refreshEvent(MouseEvent mouseEvent) {
-    }
-
-    public void contextMenuEvent(ContextMenuEvent contextMenuEvent) {
+    public void btnRefresh_click(ActionEvent actionEvent) {
     }
 }
-*/
+

@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane cacheShape="false" focusTraversable="true" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Lis">
+<AnchorPane cacheShape="false" focusTraversable="true" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListClientController">
    <children>
-      <Label layoutX="20.0" layoutY="19.0" text="Listado de Usuarios">
+      <Label layoutX="20.0" layoutY="19.0" text="Listado de Clientes">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
       <Separator layoutX="15.0" layoutY="68.0" prefHeight="2.0" prefWidth="970.0" />
-      <TableView id="table" fx:id="tableTickets" layoutX="20.0" layoutY="83.0" onContextMenuRequested="#contextMenuEvent" prefHeight="500.0" prefWidth="960.0" stylesheets="@stylesheets/style.css">
+      <TableView id="table" fx:id="tableClients" layoutX="20.0" layoutY="83.0" onContextMenuRequested="#contextMenuEvent" prefHeight="500.0" prefWidth="960.0" stylesheets="@stylesheets/style.css">
         <columns>
-          <TableColumn fx:id="colTicket" editable="false" prefWidth="116.0" resizable="false" text="Ticket" />
-          <TableColumn fx:id="colFecha" prefWidth="110.0" resizable="false" text="Fecha" />
-            <TableColumn fx:id="colHora" prefWidth="110.0" resizable="false" text="Hora" />
-            <TableColumn fx:id="colPatente" prefWidth="110.0" resizable="false" text="Patente" />
-            <TableColumn fx:id="colCliente" prefWidth="358.0" resizable="false" text="Cliente" />
-            <TableColumn fx:id="colNeto" minWidth="0.0" prefWidth="171.0" resizable="false" text="Peso neto" />
+          <TableColumn fx:id="colClient" editable="false" prefWidth="156.0" resizable="false" text="IdCliente" />
+          <TableColumn fx:id="colNombre" prefWidth="166.0" resizable="false" text="NombreCliente" />
+            <TableColumn fx:id="colDni" prefWidth="181.0" resizable="false" text="Dni" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <HBox layoutX="579.0" layoutY="20.0" spacing="20.0">
+      <HBox layoutX="468.0" layoutY="21.0" spacing="20.0">
          <children>
-            <DatePicker fx:id="datePicker" editable="false" focusTraversable="false" prefHeight="35.0" prefWidth="184.0" promptText="Seleccionar fecha" />
-            <Button fx:id="btnBuscar" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#searchTicketEvent" prefHeight="35.0" prefWidth="137.0" text="Buscar">
+            <TextField id="txtBuscar" fx:id="txtBuscar" alignment="CENTER" onAction="#btnBuscar_click" prefHeight="35.0" prefWidth="138.0" promptText="Buscar" />
+            <ChoiceBox fx:id="choiceBuscar" prefHeight="35.0" prefWidth="137.0" />
+            <Button fx:id="btnBuscar" focusTraversable="false" mnemonicParsing="false" onAction="#btnBuscar_click" onMouseClicked="#searchClientEvent" prefHeight="35.0" prefWidth="137.0" text="Buscar">
                <font>
                   <Font size="14.0" />
                </font>
@@ -45,7 +36,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnRefresh" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#refreshEvent" prefHeight="35.0" prefWidth="40.0">
+            <Button fx:id="btnRefresh" focusTraversable="false" mnemonicParsing="false" onAction="#btnRefresh_click" onMouseClicked="#refreshEvent" prefHeight="35.0" prefWidth="40.0">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>

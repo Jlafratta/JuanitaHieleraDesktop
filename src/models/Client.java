@@ -12,6 +12,10 @@ public class Client {
     private int state;
     private List<Vehicle> vehicles;
 
+//Todo agregar Domicilio Localidad Provincia , Telefono,y cambiar dni por CUIT
+
+
+
 
     public Client(int id, String name, String dni, int state) {
         this.id = id;

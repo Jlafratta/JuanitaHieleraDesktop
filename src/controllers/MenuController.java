@@ -53,9 +53,9 @@ public class MenuController implements Initializable, Utils {
     }
 
     public void btnClientesEvent(MouseEvent mouseEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(VIEWS_PATH + "ListClient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(VIEWS_PATH + "ListClients.fxml"));
         Stage stage = new Stage();
-        stage.setTitle("Listado de vehiculos");
+        stage.setTitle("Listado de Clientes");
         stage.setResizable(false);
 
         Scene scene = new Scene(root);
