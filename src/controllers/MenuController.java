@@ -52,9 +52,25 @@ public class MenuController implements Initializable, Utils {
         stage.show();
     }
 
-    public void btnClientesEvent(MouseEvent mouseEvent) {
+    public void btnClientesEvent(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(VIEWS_PATH + "ListClient.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Listado de vehiculos");
+        stage.setResizable(false);
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void btnVehiculosEvent(MouseEvent mouseEvent) {
+    public void btnVehiculosEvent(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(VIEWS_PATH + "ListVehicles.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Listado de vehiculos");
+        stage.setResizable(false);
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

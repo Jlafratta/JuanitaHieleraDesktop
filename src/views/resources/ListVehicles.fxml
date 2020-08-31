@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane cacheShape="false" focusTraversable="true" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListVehicleController">
+   <children>
+      <Label layoutX="20.0" layoutY="19.0" text="Listado de vehiculos">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="68.0" prefHeight="2.0" prefWidth="970.0" />
+      <TableView id="table" fx:id="tableVehicles" layoutX="20.0" layoutY="83.0" onContextMenuRequested="#contextMenuEvent" prefHeight="500.0" prefWidth="960.0" stylesheets="@stylesheets/style.css">
+        <columns>
+          <TableColumn fx:id="colVehicle" editable="false" prefWidth="108.00000381469727" resizable="false" text="ID-Vehiculos" />
+          <TableColumn fx:id="colPatente" prefWidth="145.59996032714844" resizable="false" text="Patente" />
+            <TableColumn fx:id="colTara" prefWidth="125.79998779296875" resizable="false" text="Tara" />
+            <TableColumn fx:id="colCliente" prefWidth="241.20001220703125" resizable="false" text="Id- NombreCliente" />
+            <TableColumn fx:id="colDescription" prefWidth="339.99993896484375" resizable="false" text="Descripcion" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox layoutX="468.0" layoutY="21.0" spacing="20.0">
+         <children>
+            <TextField id="txtBuscar" fx:id="txtBuscar" alignment="CENTER" onAction="#btnBuscar_click" prefHeight="35.0" prefWidth="138.0" promptText="Buscar" />
+            <ChoiceBox fx:id="choiceBuscar" prefHeight="35.0" prefWidth="137.0" />
+            <Button fx:id="btnBuscar" focusTraversable="false" mnemonicParsing="false" onAction="#btnBuscar_click" onMouseClicked="#searchVehicleEvent" prefHeight="35.0" prefWidth="137.0" text="Buscar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnRefresh" focusTraversable="false" mnemonicParsing="false" onAction="#btnRefresh_click" onMouseClicked="#refreshEvent" prefHeight="35.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/actualizar.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <ChoiceBox prefWidth="150.0" />
+   </children>
+</AnchorPane>

@@ -13,7 +13,7 @@ public class ClientController {
         Client client = new Client(id, name,dni,state);
 
 
-        return client ; ///ClientDao.AddClient
+        return client ;
 
 
     }
