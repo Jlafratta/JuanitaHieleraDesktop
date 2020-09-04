@@ -484,5 +484,151 @@
       "tara": 2000.0,
       "client": "2 - Pedro"
     }
+  },
+  {
+    "id": 14,
+    "idCompound": "E-14",
+    "date": "03/09/2020 - 12:04:20",
+    "bruto": 33.0,
+    "tara": 10.0,
+    "neto": 23.0,
+    "totalPrice": 460.0,
+    "client": {
+      "id": 1,
+      "name": "Julian",
+      "dni": "41307551",
+      "state": 1
+    },
+    "product": {
+      "id": 2,
+      "name": "HIELIN",
+      "price": 20.0
+    }
+  },
+  {
+    "id": 15,
+    "idCompound": "E-15",
+    "date": "04/09/2020 - 07:58:52",
+    "bruto": 110.0,
+    "tara": 20.0,
+    "neto": 90.0,
+    "totalPrice": 900.0,
+    "client": {
+      "id": 3,
+      "name": "Juan",
+      "dni": "234",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    }
+  },
+  {
+    "id": 16,
+    "idCompound": "E-16",
+    "date": "04/09/2020 - 08:04:02",
+    "bruto": 10.0,
+    "tara": 2.0,
+    "neto": 8.0,
+    "totalPrice": 80.0,
+    "client": {
+      "id": 3,
+      "name": "Juan",
+      "dni": "234",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    }
+  },
+  {
+    "id": 17,
+    "idCompound": "E-17",
+    "date": "04/09/2020 - 08:08:23",
+    "bruto": 10.0,
+    "tara": 0.0,
+    "neto": 10.0,
+    "totalPrice": 100.0,
+    "client": {
+      "id": 3,
+      "name": "Juan",
+      "dni": "234",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    }
+  },
+  {
+    "id": 18,
+    "idCompound": "E-18",
+    "date": "04/09/2020 - 08:10:32",
+    "bruto": 110.0,
+    "tara": 0.0,
+    "neto": 110.0,
+    "totalPrice": 1100.0,
+    "client": {
+      "id": 3,
+      "name": "Juan",
+      "dni": "234",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    }
+  },
+  {
+    "id": 19,
+    "idCompound": "E-19",
+    "date": "04/09/2020 - 08:13:01",
+    "bruto": 10.0,
+    "tara": 0.0,
+    "neto": 10.0,
+    "totalPrice": 100.0,
+    "client": {
+      "id": 3,
+      "name": "Juan",
+      "dni": "234",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    }
+  },
+  {
+    "id": 20,
+    "idCompound": "E-20",
+    "date": "04/09/2020 - 08:13:30",
+    "bruto": 10.0,
+    "tara": 10.0,
+    "neto": 0.0,
+    "totalPrice": 0.0,
+    "client": {
+      "id": 3,
+      "name": "Juan",
+      "dni": "234",
+      "state": 1,
+      "vehicles": []
+    },
+    "product": {
+      "id": 1,
+      "name": "HIELO",
+      "price": 10.0
+    }
   }
 ]

@@ -135,7 +135,27 @@ public class AddTicketController implements Initializable, Utils {
 
 
         String PathFilePdf = PrinterPDF.GenerarRutaPdf(TicketToPrint.getId());
-        PrinterPDF.GenerarPdf(PathFilePdf,TicketToPrint.getId(),TicketToPrint.getProduct().getName(),TicketToPrint.getBruto(),TicketToPrint.getClient().getName(),TicketToPrint.getTara(),TicketToPrint.getVehicle().getPatent(),TicketToPrint.getNeto(),TicketToPrint.getDate());
+
+
+        String PatentClient=null;
+        if (TicketToPrint.getVehicle()!=null)
+        {
+             PatentClient=TicketToPrint.getVehicle().getPatent();
+        }
+        else
+        {
+             PatentClient="------";
+        }
+        PrinterPDF.GenerarPdf(PathFilePdf,
+                TicketToPrint.getId(),
+                TicketToPrint.getProduct().getName(),
+                TicketToPrint.getBruto(),
+                TicketToPrint.getClient().getName(),
+                TicketToPrint.getTara(),
+                PatentClient,
+                TicketToPrint.getNeto(),
+                TicketToPrint.getDate());
+
         PrinterPDF.ImprimirPdf(PathFilePdf);
 
         clearFields();
