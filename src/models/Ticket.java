@@ -6,33 +6,46 @@ public class Ticket {
     private int id;
     private String idCompound;
     private String date;
-    private String time;
+    private float bruto;
+    private float tara;
     private float neto;
     private float totalPrice;
     private Client client;
     private Product product;
     private Vehicle vehicle;
 
-    public Ticket(int id, String date, String time, float neto, Client client, Product product, Vehicle vehicle) {
+    public Ticket(int id, String date, float bruto, float tara, Client client, Product product, Vehicle vehicle) {  // a borrar
         this.id = id;
         this.idCompound = "E-"+this.id;
         this.date = date;
-        this.time = time;
-        this.neto = neto;
+        this.bruto = bruto;
+        this.tara = tara;
+        this.neto = this.bruto-this.tara;
         this.client = client;
         this.product = product;
         this.vehicle = vehicle;
         this.totalPrice = (this.product.getPrice())*(this.neto);
     }
 
-    public Ticket(String date, String time, float neto, Client client, Product product, Vehicle vehicle) {
+    public Ticket(String date, float bruto, float tara, Client client, Product product, Vehicle vehicle) {
         this.date = date;
-        this.time = time;
-        this.neto = neto;
+        this.bruto = bruto;
+        this.tara = tara;
+        this.neto = this.bruto-this.tara;
         this.client = client;
         this.product = product;
         this.vehicle = vehicle;
         this.totalPrice = (this.product.getPrice())*(this.neto);
+    }
+
+    public String getTime(){
+        String[]time = getDate().split("-");
+        return time[1];
+    }
+
+    public String getDay(){
+        String[]time = getDate().split("-");
+        return time[0];
     }
 
     public int getId() {
@@ -58,14 +71,6 @@ public class Ticket {
 
     public void setDate(String date) {
         this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
     }
 
     public float getNeto() {
@@ -108,6 +113,23 @@ public class Ticket {
         this.vehicle = vehicle;
     }
 
+    public float getBruto() {
+        return bruto;
+    }
+
+    public void setBruto(float bruto) {
+        this.bruto = bruto;
+    }
+
+    public float getTara() {
+        return tara;
+    }
+
+    public void setTara(float tara) {
+        this.tara = tara;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -127,7 +149,6 @@ public class Ticket {
                 "id=" + id +
                 ", idCompound='" + idCompound + '\'' +
                 ", date='" + date + '\'' +
-                ", time='" + time + '\'' +
                 ", neto=" + neto +
                 ", TotalPrice=" + totalPrice +
                 ", client=" + client +

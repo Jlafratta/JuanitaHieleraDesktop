@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane cacheShape="false" focusTraversable="true" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListClientController">
+   <children>
+      <Label layoutX="20.0" layoutY="19.0" text="Listado de Clientes">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="68.0" prefHeight="2.0" prefWidth="970.0" />
+      <TableView id="table" fx:id="tableClients" layoutX="10.0" layoutY="83.0" onContextMenuRequested="#contextMenuEvent" prefHeight="500.0" prefWidth="970.0" stylesheets="@stylesheets/style.css">
+        <columns>
+          <TableColumn fx:id="colClient" editable="false" prefWidth="89.0" resizable="false" text="IdCliente" />
+          <TableColumn fx:id="colNombre" prefWidth="220.0" resizable="false" text="NombreCliente" />
+            <TableColumn fx:id="colCuit" prefWidth="139.0" resizable="false" text="Cuit" />
+            <TableColumn fx:id="colLocality" prefWidth="186.0" text="Localidad" />
+            <TableColumn fx:id="coldirection" prefWidth="178.0" text="Direccion" />
+            <TableColumn fx:id="colphoneNumber" prefWidth="75.0" text="Telefono" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

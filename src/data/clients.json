@@ -13,15 +13,17 @@
     "vehicles": [
       {
         "id": 1,
-        "patent": "AA222BB",
-        "model": "Prisma",
-        "brand": "Chevrolet"
+        "patent": "FOV212",
+        "description": "Gol Power",
+        "tara" : 1500.0,
+        "client" : "2 - Pedro"
       },
       {
         "id": 2,
         "patent": "AA222BB",
-        "model": "Vectra",
-        "brand": "Chevrolet"
+        "description": "Ranger",
+        "tara" : 2000.0,
+        "client" : "2 - Pedro"
       }
     ]
   },
@@ -36,48 +38,6 @@
     "id": 4,
     "name": "Pipo",
     "dni": "345",
-    "state": 1,
-    "vehicles": []
-  },
-  {
-    "id": 5,
-    "name": "Lionel Andres",
-    "dni": "123123123",
-    "state": 1,
-    "vehicles": []
-  },
-  {
-    "id": 5,
-    "name": "Lionel Andres",
-    "dni": "123123123",
-    "state": 1,
-    "vehicles": []
-  },
-  {
-    "id": 5,
-    "name": "Lionel Andres",
-    "dni": "123123123",
-    "state": 1,
-    "vehicles": []
-  },
-  {
-    "id": 5,
-    "name": "Lionel Andres",
-    "dni": "123123123",
-    "state": 1,
-    "vehicles": []
-  },
-  {
-    "id": 5,
-    "name": "Lionel Andres",
-    "dni": "123123123",
-    "state": 1,
-    "vehicles": []
-  },
-  {
-    "id": 5,
-    "name": "Lionel Andres",
-    "dni": "123123123",
     "state": 1,
     "vehicles": []
   },

@@ -3,9 +3,8 @@ package dao;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import models.Product;
 import models.Vehicle;
-import utils.Files;
+import utils.Utils;
 
 import javax.swing.*;
 import java.io.*;
@@ -13,7 +12,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VehicleDao implements Files {
+public class VehicleDao implements Utils {
 
     static File file = new File(VEHICLE_FILE);
 
@@ -44,6 +43,16 @@ public class VehicleDao implements Files {
             JOptionPane.showMessageDialog(null,"Error al actualizar datos de vehiculos","Error de archivos",
                     JOptionPane.WARNING_MESSAGE);
         }
+    }
+
+    public Vehicle getByPatent(String patent){
+        List<Vehicle> vehicleList = this.getAll();
+        for ( Vehicle v : vehicleList ) {
+            if (v.getPatent().equals(patent)){
+                return v;
+            }
+        }
+        return null;
     }
 
     public List<Vehicle> getAll(){
