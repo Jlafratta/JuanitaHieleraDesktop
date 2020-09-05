@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -27,34 +25,5 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <HBox layoutX="468.0" layoutY="21.0" spacing="20.0">
-         <children>
-            <TextField id="txtBuscar" fx:id="txtBuscar" alignment="CENTER" onAction="#btnBuscar_click" prefHeight="35.0" prefWidth="138.0" promptText="Buscar" />
-            <ChoiceBox fx:id="choiceBuscar" prefHeight="35.0" prefWidth="137.0" />
-            <Button fx:id="btnBuscar" focusTraversable="false" mnemonicParsing="false" onAction="#btnBuscar_click" onMouseClicked="#searchClientEvent" prefHeight="35.0" prefWidth="137.0" text="Buscar">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnRefresh" focusTraversable="false" mnemonicParsing="false" onAction="#btnRefresh_click" onMouseClicked="#refreshEvent" prefHeight="35.0" prefWidth="40.0">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/actualizar.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-      </HBox>
    </children>
 </AnchorPane>
