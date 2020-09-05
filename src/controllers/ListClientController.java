@@ -1,22 +1,16 @@
 package controllers;
 
 import dao.ClientDao;
-import dao.TicketDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import models.Client;
-import models.Ticket;
-import models.Vehicle;
 import utils.Utils;
 
 import java.net.URL;
@@ -37,12 +31,22 @@ public class ListClientController implements Initializable, Utils {
     @FXML
     public TableColumn<Client, String> colNombre;
     @FXML
-    public TableColumn<Client, String> colDni;
-
+    public TableColumn<Client, String> colCuit;
+    @FXML
+    public TableColumn<Client, String> colphoneNumber;
+    @FXML
+    public TableColumn<Client, String> coldirection;
+    @FXML
+    public TableColumn<Client, String> colLocality;
     @FXML
     public Button btnBuscar;
     @FXML
     public Button btnRefresh;
+    @FXML
+    public TextField txtBuscar;
+    @FXML
+    public ChoiceBox choiceBuscar;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -53,8 +57,10 @@ public class ListClientController implements Initializable, Utils {
     public void configTable(){
         colClient.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNombre.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colDni.setCellValueFactory(new PropertyValueFactory<>("dni"));
-
+        colCuit.setCellValueFactory(new PropertyValueFactory<>("cuit"));
+        colphoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        coldirection.setCellValueFactory(new PropertyValueFactory<>("direction"));
+        colLocality.setCellValueFactory(new PropertyValueFactory<>("locality"));
         tableClients.setItems(ClientData);
     }
 
