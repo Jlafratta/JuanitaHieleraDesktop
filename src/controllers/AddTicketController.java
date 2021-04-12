@@ -1,6 +1,5 @@
 package controllers;
 
-
 import dao.ClientDao;
 import dao.ProductDao;
 import dao.TicketDao;
@@ -17,12 +16,11 @@ import models.Client;
 import models.Product;
 import models.Ticket;
 import models.Vehicle;
-import utils.NumberField;
 import utils.FactoryPDF;
+import utils.NumberField;
 import utils.Utils;
 
 import java.awt.print.PrinterException;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
